@@ -5,8 +5,7 @@ import { motion } from "framer-motion";
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative py-20">
-      <div className="absolute inset-x-0 top-10 h-60 bg-gradient-to-b from-brand/30 to-transparent blur-3xl" />
+    <section id="about" className="relative py-20 bg-slate-50">
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         <SectionHeading
           eyebrow="About"
@@ -14,13 +13,13 @@ export function AboutSection() {
           subtitle="Kwiko Technologies And Services blends product design, AI, and automation to craft scalable, high-performing platforms."
         />
         <motion.div
-          initial={{ opacity: 0, y: 32 }}
+          initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="glass rounded-3xl border border-white/5 p-8 text-white/80"
+          transition={{ duration: 0.55 }}
+          className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm"
         >
-          <p className="text-lg leading-relaxed text-white/80">
+          <p className="text-lg leading-relaxed text-slate-600">
             A modern software and AI solutions company helping startups and businesses drive intelligent digital transformation.
             We craft AI systems, scalable software, branding, and online growth strategies grounded in transparent collaboration and measurable outcomes.
           </p>

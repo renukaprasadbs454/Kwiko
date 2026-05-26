@@ -1,12 +1,13 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-sans",
-  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -42,12 +43,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`bg-surface text-slate-900 antialiased min-h-screen ${spaceGrotesk.variable}`}>
-        <div className="fixed inset-0 pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#000192]/40 via-[#101828]/30 to-black blur-3xl" />
-          <div className="absolute inset-0" />
-        </div>
-        <div className="relative z-10">{children}</div>
+      <body className={`bg-white text-slate-900 antialiased min-h-screen ${inter.variable}`}>
+        {children}
       </body>
     </html>
   );

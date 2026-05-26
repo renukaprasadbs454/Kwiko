@@ -19,22 +19,22 @@ export function SectionHeading({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.6 }}
-      className={`max-w-3xl mb-14 ${alignClass}`}
+      transition={{ duration: 0.5 }}
+      className={`max-w-3xl mb-12 ${alignClass}`}
     >
       {eyebrow && (
-        <span className="inline-block text-sm font-medium tracking-widest uppercase text-brand-light/80 mb-3">
+        <span className="inline-block text-xs font-semibold tracking-[0.25em] uppercase text-brand mb-3">
           {eyebrow}
         </span>
       )}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-gradient">
+      <h2 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-bold tracking-tight text-gradient leading-tight">
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 text-base sm:text-lg text-white/60 leading-relaxed">
+        <p className="mt-4 text-base sm:text-lg text-slate-500 leading-relaxed">
           {subtitle}
         </p>
       )}

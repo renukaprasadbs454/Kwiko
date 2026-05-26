@@ -13,23 +13,25 @@ export function StatsSection() {
   ];
 
   return (
-    <section className="py-12">
-      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-6 sm:grid-cols-4">
+    <section className="border-y border-slate-100 bg-slate-50 py-10">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 px-6 sm:grid-cols-4">
         {STATS.map((stat, index) => (
           <motion.div
             key={stat.label}
             ref={counterHooks[index].ref}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="glass rounded-2xl border border-white/10 p-6 text-center"
+            className="rounded-xl border border-slate-200 bg-white p-6 text-center shadow-sm"
           >
-            <p className="text-3xl font-bold text-white">
+            <p className="text-3xl font-extrabold text-brand">
               {counterHooks[index].count}
-              <span className="text-lg text-white/60">{stat.suffix}</span>
+              <span className="text-lg text-slate-400">{stat.suffix}</span>
             </p>
-            <p className="text-xs uppercase tracking-[0.4em] text-white/60">{stat.label}</p>
+            <p className="mt-1 text-xs font-semibold uppercase tracking-widest text-slate-500">
+              {stat.label}
+            </p>
           </motion.div>
         ))}
       </div>

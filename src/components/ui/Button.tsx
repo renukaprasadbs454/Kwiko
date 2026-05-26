@@ -14,11 +14,9 @@ interface ButtonProps {
 }
 
 const variants = {
-  primary:
-    "bg-brand text-white hover:bg-[#0000b8] glow-brand border border-brand-light/20",
-  secondary:
-    "glass text-white hover:border-brand-light/30 hover:bg-white/5",
-  ghost: "text-white/80 hover:text-white hover:bg-white/5",
+  primary: "bg-brand text-white hover:bg-[#0000cc] glow-brand",
+  secondary: "bg-white text-slate-800 border border-slate-300 hover:border-brand hover:text-brand",
+  ghost: "text-slate-600 hover:text-brand hover:bg-slate-50",
 };
 
 export function Button({
@@ -30,12 +28,12 @@ export function Button({
   type = "button",
 }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300";
+    "inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200";
 
   const classes = `${base} ${variants[variant]} ${className}`;
 
   const motionProps = {
-    whileHover: { scale: 1.03, y: -2 },
+    whileHover: { scale: 1.02, y: -1 },
     whileTap: { scale: 0.98 },
     className: classes,
   };

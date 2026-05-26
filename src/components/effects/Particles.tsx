@@ -19,26 +19,14 @@ const particles = [
 
 export function Particles() {
   return (
-    <div className="absolute inset-0 overflow-hidden opacity-70">
-      {particles.map((particle, index) => (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      {particles.map((p, index) => (
         <motion.span
-          key={`${particle.left}-${particle.top}`}
-          className="absolute h-1.5 w-1.5 rounded-full bg-brand-light/70"
-          style={{
-            left: particle.left,
-            top: particle.top,
-            transform: `scale(${particle.scale})`,
-          }}
-          animate={{
-            y: ["0%", "30%", "0%"],
-            opacity: [0.5, 1, 0.5],
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 8 + index,
-            delay: index * 0.3,
-            ease: "easeInOut",
-          }}
+          key={`${p.left}-${p.top}`}
+          className="absolute h-1.5 w-1.5 rounded-full bg-brand/20"
+          style={{ left: p.left, top: p.top, transform: `scale(${p.scale})` }}
+          animate={{ y: ["0%", "25%", "0%"], opacity: [0.3, 0.7, 0.3] }}
+          transition={{ repeat: Infinity, duration: 8 + index, delay: index * 0.3, ease: "easeInOut" }}
         />
       ))}
     </div>
