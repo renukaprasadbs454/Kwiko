@@ -3,9 +3,9 @@
 @theme {
   --color-brand: #000192;
   --color-brand-light: #dbe4ff;
-  --color-surface: #0a0a0a;
-  --color-surface-elevated: #101828;
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --color-surface: #f8fafc;
+  --color-surface-elevated: #e2e8f5;
+  --font-sans: var(--font-sans), "Space Grotesk", system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
@@ -14,28 +14,30 @@ html {
 }
 
 body {
-  background: var(--color-surface);
-  color: #ffffff;
+  background: radial-gradient(circle at top, #f5f6ff, #eef2ff 55%, #edf2ff 75%, #e2e8f5 100%);
+  color: #0f172a;
   overflow-x: hidden;
 }
 
 ::selection {
-  background: rgba(0, 1, 146, 0.6);
+  background: rgba(29, 78, 216, 0.6);
   color: #ffffff;
 }
 
 .glass {
-  background: rgba(16, 24, 40, 0.55);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(219, 228, 255, 0.08);
+  border: 1px solid rgba(13, 30, 49, 0.08);
+  color: #0f172a;
 }
 
 .glass-strong {
-  background: rgba(16, 24, 40, 0.75);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(219, 228, 255, 0.12);
+  border: 1px solid rgba(13, 30, 49, 0.12);
+  color: #0f172a;
 }
 
 .gradient-border {
@@ -45,26 +47,30 @@ body {
   border: 1px solid transparent;
 }
 
+body.light-theme {
+  background: linear-gradient(180deg, #f7f8ff, #eef2ff 50%, #dbeafe 100%);
+}
+
 .text-gradient {
-  background: linear-gradient(135deg, #ffffff 0%, #dbe4ff 50%, #ffffff 100%);
+  background: linear-gradient(135deg, #1d4ed8 0%, #4c1d95 50%, #0f172a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .glow-brand {
-  box-shadow: 0 0 40px rgba(0, 1, 146, 0.35), 0 0 80px rgba(0, 1, 146, 0.15);
+  box-shadow: 0 0 40px rgba(13, 42, 148, 0.35), 0 0 80px rgba(15, 23, 42, 0.15);
 }
 
 .hero-glow {
   background: radial-gradient(
-      ellipse 80% 50% at 50% -20%,
-      rgba(0, 1, 146, 0.45),
-      transparent
+      ellipse 80% 60% at 50% -10%,
+      rgba(13, 42, 148, 0.25),
+      transparent 55%
     ),
     radial-gradient(
       ellipse 60% 40% at 80% 50%,
-      rgba(219, 228, 255, 0.06),
+      rgba(219, 228, 255, 0.25),
       transparent
     );
 }
